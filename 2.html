@@ -6,11 +6,11 @@
     <script src="jquery-3.1.0.min.js"></script>
     <script src="vue.min.js"></script>
     <style>
-        .v {
+        #v {
             position: fixed;
             bottom: 0;
         }
-        .v span {
+        #v span {
             font-size: 100px;
         }
     </style>
@@ -18,7 +18,7 @@
 <body>
     <div id="dd">
         <input type="text" style="height: 100px;width: 200px;" v-on:focus="as">
-        <div class="v">
+        <div id="v">
             <span>1232</span>
         </div>
     </div>
@@ -27,7 +27,7 @@
            el:"#dd",
             methods:{
                as: function () {
-                   alert(1);
+                    document.getElementById("v").style.display="none";
                }
             }
         });

@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="dd">
-        <input type="text" style="height: 100px;width: 200px;" v-on:focus="as">
+        <input type="text" style="height: 100px;width: 200px;" v-on:focus="as" v-on:blur="bs">
         <div id="v">
             <span>1232</span>
         </div>
@@ -28,7 +28,10 @@
             methods:{
                as: function () {
                     document.getElementById("v").style.display="none";
-               }
+               },
+                bs: function () {
+                    document.getElementById("v").style.display="block";
+                },
             }
         });
     </script>
